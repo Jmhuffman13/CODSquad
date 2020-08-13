@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Gamer>
+
+<h2>Players</h2>
+
+<div style="display: block">
+    <a href="/Gamer/InsertGamer/">Create a New Gamer</a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>Wins</th>
+        <th>TopTwentyFive</th>
+        <th>TopTen</th>
+        <th>Category</th>
+        <th>Top 5</th>
+        <th>Kills</th>
+        <th>Deaths</th>
+        <th>KDRatio</th>
+        <th>Score</th>
+        <th>ScorePerMinute</th>
+    </tr>
+
+    @foreach (var gamer in Model)
+    {
+        <tr>
+            <td><a href=/Product/ViewProduct/@gamer>@gamer</a></td>
+            <td>@gamer.Wins</td>
+            <td>@gamer.TopTwentyFive</td>
+            <td>@gamer.TopTen</td>
+            <td>@gamer.TopFive</td>
+            <td>@gamer.Kills</td>
+            <td>@gamer.Deaths</td>
+            <td>@gamer.KDRatio</td>
+            <td>@gamer.Score</td>
+            <td>@gamer.ScorePerMinute</td>
+        </tr>
+    }
+</table>
